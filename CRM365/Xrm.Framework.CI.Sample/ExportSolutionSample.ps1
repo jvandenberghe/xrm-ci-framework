@@ -4,7 +4,9 @@
 
 param
 (
-	[string]$connectionString = "URL=https://org5b2169f3.crm.dynamics.com; UserName=sphillips@firstkeyhomes.com; Password=Pokemonprs1221!; AuthType=Office365" #The connection string as per CRM Sdk
+	[string]$connectionString = "AuthType=Office365;UserName=Dynamics-Admin@firstkeyhomes.com;Password=Welcome2FKH!;URL=https://org5b2169f3.crm.dynamics.com",
+	[string]$solutionName = "Announcements",
+	[string]$exportSolutionOutputPath = "C:\Users\sphillips\Desktop\Output"
 )
 
 $ErrorActionPreference = "Stop"
@@ -17,4 +19,4 @@ $VerbosePreference = "Continue"
 Write-Verbose "Script Path: $scriptPath"
 Write-Verbose "ConnectionString = $connectionString"
 
-& "$scriptPath\Lib\xRMCIFramework\ExportSolution.ps1" -Verbose -CrmConnectionString $connectionString -SolutionName "Announcements" -ExportSolutionOutputPath "C:\Users\sphillips\Desktop\Output"
+& "$scriptPath\Lib\xRMCIFramework\ExportSolution.ps1" -Verbose -CrmConnectionString $connectionString -SolutionName $solutionName -ExportSolutionOutputPath $exportSolutionOutputPath	
