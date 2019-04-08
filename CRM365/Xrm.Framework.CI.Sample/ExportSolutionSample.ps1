@@ -1,5 +1,7 @@
 [CmdletBinding()]
 
+#Testing GITHook
+
 param
 (
 	[string]$connectionString = "URL=https://org5b2169f3.crm.dynamics.com; UserName=sphillips@firstkeyhomes.com; Password=Pokemonprs1221!; AuthType=Office365" #The connection string as per CRM Sdk
